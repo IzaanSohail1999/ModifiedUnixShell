@@ -1,0 +1,4 @@
+#!/bin/bash
+#running train
+echo "HEY THERE GOES YOUR TRAIN"
+sl 

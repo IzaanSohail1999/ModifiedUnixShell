@@ -1,0 +1,40 @@
+#!/bin/bash
+# addition  ,  multiplication ,  division , subtraction
+total=0
+value=0
+read -p "Enter 1 for Addition , 2 for Subtraction , 3 for Multiplication , 4 for division" choice
+if [ $choice = 1 ]; then
+read -p "Enter the total number of values you want to add : " n
+for (( i=1; i <= $n ; ++i )) 
+do
+read -p "Enter the value :" value
+total=$(( total + value ))
+done
+echo "Total is $total "
+fi 
+
+if [ $choice = 2 ]; then
+read -p "Enter the values you want to subtract : " n n1
+total=$(( n - n1 ))
+echo "Ans is $total"
+fi
+
+if [ $choice  = 3 ]; then
+mul=1
+read -p "Enter the total number of values you want to multiply : " n
+for (( i=1; i <= $n ; ++i )) 
+do
+read -p "Enter the value :" value
+mul=$(( mul * value ))
+done
+echo "Ans is $mul"
+fi
+
+if [ $choice = 4 ]; then
+read -p "Enter a and to perform a/b : " a b
+total=$(( a / b ))
+echo "Division answer is : $total"
+fi
+
+
+

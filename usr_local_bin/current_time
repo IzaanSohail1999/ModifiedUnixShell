@@ -1,0 +1,4 @@
+#!/bin/bash
+#prints current time
+now=$( date "+%r" ) 
+echo "Current time : $now"

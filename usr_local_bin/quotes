@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "These are the character names."
+cowsay -l
+echo "Enter the character name : "
+read name
+fortune | cowsay -f $name | lolcat

@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "Enter a Number"
+read n
+echo "Enter Range"
+read r
+j=1
+for (( i=0 ; i<$r ; i++ )) 
+do
+a=$(( n * j ))
+echo " $n x $j = $a"
+j=$(( j + 1 ))
+done

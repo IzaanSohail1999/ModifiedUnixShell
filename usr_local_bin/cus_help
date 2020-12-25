@@ -1,0 +1,69 @@
+clear
+echo "WELCOME TO THE CUSTOM COMMANDS HELP SERVICE" | lolcat
+echo "List of all custom commands :" | lolcat
+echo "1) calculator" 
+echo "2) fpermission"
+echo "3) Print_Table"
+echo "4) weather"
+echo "5) choo_choo"
+echo "6) current_time"
+echo "7) Guessing_game"
+echo "8) cmp_files"
+echo "9) cvrt_code"
+echo "10) mem_occ"
+echo "11) quotes"
+echo "12) encrypt"
+echo "13) MP4TMP3"
+echo "14) todo_list"
+echo "15) cvt_pdf"
+
+echo "Enter index to display information about a command :"
+read n
+if [ $n = 1 ]
+then
+echo " This is a simple calculator for addition subtraction and division." | lolcat
+elif [ $n = 2 ]
+then
+echo " This command displays information about the permissions a file is given." | lolcat
+elif [ $n = 3 ]
+then
+echo " This command is used to display a multiplation table of the required numebr." | lolcat
+elif [ $n = 4 ]
+then
+echo " This command displays the weather forcasting and moon phases of a perticular place and a particular date. " | lolcat
+elif [ $n = 5 ]
+then
+echo "This is a fun command , try it out :) ." | lolcat
+elif [ $n = 6 ]
+then
+echo " This command displays the current time in hours  , minutes and seconds." | lolcat
+elif [ $n = 7 ]
+then
+echo " Try this simple number guessing game in which you have 3 guesses." | lolcat
+elif [ $n = 8 ]
+ then
+echo " This command takes file names as input and decides whether the files are identical or not." | lolcat
+elif [ $n = 9 ]
+then
+echo "This takes a string input and outputs equivalent barcode." | lolcat
+elif [ $n = 10 ]
+then
+echo "This command displays the details of memory occupied by each running process." | lolcat
+elif [ $n = 11 ]
+then
+echo "This displays inspirational quotes." | lolcat
+elif [ $n = 12 ]
+then
+echo "This command is used to encrypt a string." | lolcat
+elif [ $n = 13 ]
+then
+echo "This command is used to convert a mp4 video to mp3." | lolcat
+elif [ $n = 14 ] 
+then
+echo "This is a user friendly todo list in which you can add your tasks and mark them done." | lolcat
+elif [ $n = 15 ]
+then
+echo " This command converts a .doc file to .pdf file format." | lolcat
+else
+echo "Error"
+fi

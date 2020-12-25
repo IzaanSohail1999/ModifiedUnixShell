@@ -1,0 +1,4 @@
+echo "ENTER A STRING TO ENCRYPT"
+read str_to_encrypt
+echo str_to_encrypt | openssl enc -aes-256-cbc -a -salt -pass pass:tecmint
+

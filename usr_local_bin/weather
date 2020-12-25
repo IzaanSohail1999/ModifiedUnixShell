@@ -1,0 +1,23 @@
+echo "Enter 1 for weather forcast and 2 for checking moon phase"
+read choice
+if [ $choice = 1 ] 
+then
+echo "Enter city/country name for weather forcast : "
+read name
+curl wttr.in/$name
+elif [ $choice = 2 ]
+then
+echo "Do you want the current moon phase or on a particular date ?  , Enter 1 for current and 2 for particular date"
+read num
+if [ $num = 1 ]
+then
+curl wttr.in/moon
+else
+echo "Enter particular date in the format YYYY-MM-DD : "
+read mydate
+curl wttr.in/moon@$mydate
+fi
+else
+echo "Error"
+fi
+

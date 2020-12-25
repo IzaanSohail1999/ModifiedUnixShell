@@ -1,0 +1,12 @@
+#!/bin/bash
+#compare two files
+read -p "Enter files name to compare : " file1 file2
+diff --brief <(sort  $file1) <(sort $file2) >/dev/null
+comp_value=$?
+
+if [ $comp_value -eq 1 ]
+then
+    echo "The two files are different"
+else
+    echo "The two files are identical"
+fi

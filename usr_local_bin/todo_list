@@ -1,0 +1,83 @@
+figlet " YOUR LIST " | lolcat
+cd /home/mycmd
+sudo todo all | lolcat
+echo " Press 1 to add a task " |lolcat
+echo " Press 2 to edit a task " |lolcat
+echo " Press 3 to mark a task done "|lolcat
+echo " Press 4 to remove a task "|lolcat
+read choice
+if [ $choice = 1 ]
+ then
+x=0
+
+while [ $x != 1 ]
+do
+echo "Enter your task , Enter 1 to exit"
+read t1
+if [ $t1 != 1 ] 
+then
+sudo todo -a $t1
+else
+x=1
+fi
+done
+cd /home/mycmd
+sudo todo all | lolcat
+
+elif [ $choice = 2 ]
+then
+cd /home/mycmd
+x=0
+while [ $x != -1 ]
+do
+sudo todo all|lolcat
+echo "Enter the index number you want to edit ,Enter -1 to exit "
+read index
+if [ $index != -1 ] 
+then
+sudo todo -e $index
+else
+x=-1
+fi
+done
+
+elif [ $choice = 3 ]
+then
+cd /home/mycmd
+x=0
+while [ $x != -1 ]
+do
+sudo todo all|lolcat
+echo "Enter the index number you want to mark done , Enter -1 to exit"
+read t1
+if [ $t1 != -1 ] 
+then
+sudo todo -d $t1
+else
+x=-1
+fi
+done
+sudo todo all|lolcat
+
+elif [ $choice = 4 ]
+then
+cd /home/mycmd
+x=0
+while [ $x != -1 ]
+do
+sudo todo all|lolcat
+echo "Enter the index number you want remove , Enter -1 to exit"
+read index
+if [ $index != -1 ] 
+then
+sudo todo --remove $index
+else
+x=-1
+fi
+done
+sudo todo all|lolcat
+else
+echo "error" |lolcat
+fi
+
+

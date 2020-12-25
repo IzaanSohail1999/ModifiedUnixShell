@@ -1,0 +1,6 @@
+echo "Enter mp4 file name : "
+read name
+echo "Enter new mp3 file name :"
+read newname
+sudo ffmpeg -i $name.mp4 $newname.mp3
+ffplay $newname.mp3

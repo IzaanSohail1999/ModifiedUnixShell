@@ -1,0 +1,5 @@
+echo "Enter the document filename:"
+read name
+sudo lowriter --convert-to pdf $name.doc
+evince $name.pdf
+
